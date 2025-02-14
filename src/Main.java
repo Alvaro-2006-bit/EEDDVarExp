@@ -10,7 +10,7 @@ public class Main {
         boolean vb = false;
         System.out.println("vi: " + vi + " vd: " +vd);
 
-        //Conversion de tipos de datos
+        //Conversion de tipos de datos cambio
         vi = (int)2.8 + (int)1.6;
         System.out.println("vi: " + vi);
         vi = (int)(2.8 + 1.6);
