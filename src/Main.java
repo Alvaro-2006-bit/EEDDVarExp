@@ -17,6 +17,42 @@ public class Main {
         System.out.println("vi: " + vi);
         vi = vc + 1;
         System.out.println("vi (entero): " + vi + " vi (char): " + (char)vi);
+
+        //Operadores
+        int a = 1, b = 2;
+        System.out.println("a: " + a + " b: " + b);
+        a++; //postincremento
+        ++b; //preincremento
+        System.out.println("a: " + a + " b: " + b);
+        int c = a++ * ++b;
+        System.out.println("a: " + a + " b: " + b + " c: " + c);
+
+        //precedencia de operadores () ++ -- */% +- << = ==!= > >=  || && !
+        boolean bo = (2+8) < ++a || 2 + 5 * 9 == a++ + 43;
+        //10 < ++a || 2 + 5 * 9 == 4++ + 43;
+        //10 < 4 || 2 + 5 * 9 == 4 + 43; (a vale 5)
+        //10 < 4 || 2 + 45 == 47
+        //10 < 4 || 47 == 47
+        //false || true
+        //true
+        System.out.println("bo: " + bo);
+        bo = ++a < 10 || ++a == 6; //no hace la segunda parte del or porque la primera ya es true (||)
+        System.out.println("bo: " + bo + " a: " + a);
+        bo = ++a < 10 | ++a == 6; //hace las dos partes del or aunque la primera sea verdadera (|)
+        System.out.println("bo: " + bo + " a: " + a);
+
+        cad = "Hola";
+        //Sobrecarga de operadores: el operador se comporta de forma diferente
+        //Segun sus operandos
+        a = 1 + 1; // + es suma algebraica
+        cad = "1" + "1" + 2 + 3; // + es concatencacion incluir otro tipo se denomina wrapping
+        System.out.println("cad: " + cad);
+        String cad1 = cad.substring(3, 4); //posicion inicial (0->) posicion final (1->)
+        System.out.println("cad1: " + cad1);
+
+        bo = "hola" .equals("Hola");
+        System.out.println("bo: " + bo);
+
         System.exit(0);
 
         Scanner sc = new Scanner(System.in);
