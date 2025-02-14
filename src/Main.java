@@ -7,9 +7,19 @@ public class Main {
         double vd = 2.3;
         char vc ='A';
         String cad = "hola";
-        System.out.println("vi: "+ vi + " vd: " +vd);
-        Scanner sc = new Scanner(System.in);
+        boolean vb = false;
+        System.out.println("vi: " + vi + " vd: " +vd);
 
+        //Conversion de tipos de datos
+        vi = (int)2.8 + (int)1.6;
+        System.out.println("vi: " + vi);
+        vi = (int)(2.8 + 1.6);
+        System.out.println("vi: " + vi);
+        vi = vc + 1;
+        System.out.println("vi (entero): " + vi + " vi (char): " + (char)vi);
+        System.exit(0);
+
+        Scanner sc = new Scanner(System.in);
         System.out.println("Ingresa un entero: ");
         vi = sc.nextInt();
         System.out.println("El numero que has ingresado es: "+vi);
